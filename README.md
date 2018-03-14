@@ -15,13 +15,13 @@ Nội dung: Xây dựng một trình phát nhạc, video trên máy tính window
 ## Tiến độ công việc
 
 
-## Các chức năng chính của chương trình.
-### Giai đoạn 1 (Trước tháng 23/4).
+## Các chức năng chính của chương trình
+### Giai đoạn 1 (Trước tháng 23/4)
 1. Chơi được một số định dạng nhạc và video phổ biến (mp3, wav, mp4, etc.)
 2. Một số chức năng chơi nhạc và video cơ bản như trộn, lặp, dừng, phát, ngưng, etc.
 3. Hiển thị thông tin của bài nhạc và video (ca sĩ, album, cover, thể loại, lyrics …)
 4. Màn hình now-playing.
-5. Tạo play list
+5. Tạo playlist
 6. Phát nhạc và video trong một thư mục chỉ định và liệt kê các bài hát, video có trong thư mục đó.
 7. Sắp xếp các bài nhạc, video (Theo tên, ca sĩ, album, năm phát hành …).
 8. Hiển thị danh sách những file nhạc, video được phát gần đây.
