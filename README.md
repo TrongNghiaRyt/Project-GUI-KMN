@@ -7,10 +7,10 @@
 Nội dung: Xây dựng một trình phát nhạc, video trên máy tính windows, giao diện thân thiện, hiệu quả.
 
 ## Thành viên nhóm:
-1. Võ Thị Một
+1. [Võ Thị Một](https://github.com/RanChiVo)
 2. [Trương Tuấn Ngạn](https://github.com/deanzhang380)
 3. [Nguyễn Hoàng Trọng Nghĩa](https://github.com/TrongNghiaRyt)
-4. Nguyễn Thị Lan Phương
+4. [Nguyễn Thị Lan Phương](https://github.com/LPGRain)
 
 ## Tiến độ công việc
 
