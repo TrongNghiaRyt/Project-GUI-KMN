@@ -10,7 +10,7 @@ Nội dung: Xây dựng một trình phát nhạc, video trên máy tính window
 1. [Võ Thị Một](https://github.com/RanChiVo)
 2. [Trương Tuấn Ngạn](https://github.com/deanzhang380)
 3. [Nguyễn Hoàng Trọng Nghĩa](https://github.com/TrongNghiaRyt)
-4. [Nguyễn Thị Lan Phương](https://github.com/LPGRain)
+4. [Nguyễn Thị Lan Phương](https://github.com/LPGRian)
 
 ## Tiến độ công việc
 
