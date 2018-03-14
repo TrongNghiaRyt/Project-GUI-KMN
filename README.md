@@ -8,7 +8,7 @@ Nội dung: Xây dựng một trình phát nhạc, video trên máy tính window
 
 ## Thành viên nhóm:
 1. Võ Thị Một
-2. Trương Tuấn Ngạn
+2. [Trương Tuấn Ngạn](https://github.com/deanzhang380)
 3. [Nguyễn Hoàng Trọng Nghĩa](https://github.com/TrongNghiaRyt)
 4. Nguyễn Thị Lan Phương
 
