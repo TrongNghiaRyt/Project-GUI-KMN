@@ -16,7 +16,7 @@ Nội dung: Xây dựng một trình phát nhạc, video trên máy tính window
 
 
 ## Các chức năng chính của chương trình
-### Giai đoạn 1 (Trước tháng 23/4)
+### Giai đoạn 1 (Trước 23/4)
 1. Chơi được một số định dạng nhạc và video phổ biến (mp3, wav, mp4, etc.)
 2. Một số chức năng chơi nhạc và video cơ bản như trộn, lặp, dừng, phát, ngưng, etc.
 3. Hiển thị thông tin của bài nhạc và video (ca sĩ, album, cover, thể loại, lyrics …)
@@ -42,5 +42,8 @@ Nội dung: Xây dựng một trình phát nhạc, video trên máy tính window
 4. Đọc Thông tin file: [taglib#](https://github.com/taglib/taglib)
 
 
-## Tasks (Công việc)
+## Công việc (Tasks)
 
+## Công cụ (Tools)
+1. Visual studio 2015/2017
+2. MS SQL Sever 2014
