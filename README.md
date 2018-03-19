@@ -36,14 +36,17 @@ Nội dung: Xây dựng một trình phát nhạc, video trên máy tính window
 ## Thư viện được sử dụng
 > Đây mới chỉ là một số *gợi ý* về các *thư viện* **có thể được sử dụng** trong chương trình. Mục này vẫn cần được cập nhật thường xuyên và trao đổi thêm trong phần commit.
 0. C#/.NET.
-1. Giao diện
-2. Xử lý âm thanh
+1. Giao diện: [Bunifu 1.52](https://drive.google.com/file/d/0B-y3LjBNMjimVHZfVFBqbkt0am8/view)
+2. Xử lý âm thanh:
+- [NAudio](https://github.com/naudio/NAudio) Có thể sẽ sử dụng.
+- [BASS audio libary](http://www.un4seen.com/)
 3. Xử lý video
-4. Đọc Thông tin file: [taglib#](https://github.com/taglib/taglib)
+- DirectX (Only on x86 project)
+4. Thao tác với playlist: [LiteDB](https://github.com/mbdavid/LiteDB)
+5. Đọc Thông tin file: [taglib#](https://github.com/taglib/taglib)
 
 
 ## Công việc (Tasks)
 
 ## Công cụ (Tools)
-1. Visual studio 2015/2017
-2. MS SQL Sever 2014
+1. Visual studio 2015.
