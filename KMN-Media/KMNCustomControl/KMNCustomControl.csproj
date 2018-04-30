@@ -43,6 +43,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SingleTitle.Designer.cs">
+      <DependentUpon>SingleTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabTitle.Designer.cs">
+      <DependentUpon>TabTitle.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrackBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -51,6 +63,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="SingleTitle.resx">
+      <DependentUpon>SingleTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabTitle.resx">
+      <DependentUpon>TabTitle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrackBar.resx">
       <DependentUpon>TrackBar.cs</DependentUpon>
     </EmbeddedResource>
