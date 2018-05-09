@@ -43,8 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="exListBox.cs" />
-    <Compile Include="exListBox.designer.cs">
-      <DependentUpon>exListBox.cs</DependentUpon>
+    <Compile Include="exListBox.designer.cs" />
+    <Compile Include="ImageButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImageButton.Designer.cs">
+      <DependentUpon>ImageButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingleTitle.cs">
