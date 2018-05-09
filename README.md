@@ -12,8 +12,6 @@ Nội dung: Xây dựng một trình phát nhạc, video trên máy tính window
 3. [Nguyễn Hoàng Trọng Nghĩa](https://github.com/TrongNghiaRyt)
 4. [Nguyễn Thị Lan Phương](https://github.com/LPGRian)
 
-## Tiến độ công việc
-
 
 ## Các chức năng chính của chương trình
 ### Giai đoạn 1 (Trước 23/4)
