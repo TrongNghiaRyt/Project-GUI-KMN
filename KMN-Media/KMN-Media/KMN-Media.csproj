@@ -87,31 +87,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\play-button.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\back.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fast-forward.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mute.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\next.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\replay.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rewind.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\play1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\play2.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
