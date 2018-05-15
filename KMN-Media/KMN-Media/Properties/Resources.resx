@@ -118,53 +118,44 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ReplayClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ReplayClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PlayButtonHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlayButtonHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StopNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StopNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HighVolumeNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HighVolumeNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ShuffleHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShuffleHover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShuffleClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShuffleClick1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FastForwardNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FastForwardNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlayButtonNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayButtonNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FastForwardClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FastForwardClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RewindHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RewindHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ShuffleNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShuffleNormal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PauseClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PauseClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ReplayNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ReplayNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MuteNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MuteNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PlayButtonHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayButtonHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MuteHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MuteHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HighVolumeClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HighVolumeClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="StopHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\StopHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MuteClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MuteClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PlayButtonClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlayButtonClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="FastForwardHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FastForwardHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="StopNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\StopNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MuteNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MuteNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PlayButtonNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlayButtonNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StopClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StopClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HighVolumeHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HighVolumeHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,31 +163,58 @@
   <data name="PauseHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PauseHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RewindClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RewindClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RewindNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RewindNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ReplayHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ReplayHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PauseClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PauseClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FastForwardNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FastForwardNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PlayButtonClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayButtonClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RewindHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RewindHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StopHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StopHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighVolumeClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighVolumeClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReplayNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ReplayNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PauseNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PauseNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="StopClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\StopClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ReplayHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ReplayHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RewindNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RewindNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ReplayClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ReplayClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ShuffleClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ShuffleClick1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RewindClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RewindClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ShuffleHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ShuffleHover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MuteClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MuteClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ShuffleNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ShuffleNormal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fullscreenClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fullscreenClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fullscreenHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fullscreenHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fullscreenNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fullscreenNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unFullscreenClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unFullscreenClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unFullscreenHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unFullscreenHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unFullscreenNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unFullscreenNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

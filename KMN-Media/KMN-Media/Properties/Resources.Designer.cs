@@ -93,6 +93,36 @@ namespace KMN_Media.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fullscreenClick {
+            get {
+                object obj = ResourceManager.GetObject("fullscreenClick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fullscreenHover {
+            get {
+                object obj = ResourceManager.GetObject("fullscreenHover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fullscreenNormal {
+            get {
+                object obj = ResourceManager.GetObject("fullscreenNormal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HighVolumeClick {
             get {
                 object obj = ResourceManager.GetObject("HighVolumeClick", resourceCulture);
@@ -326,6 +356,36 @@ namespace KMN_Media.Properties {
         internal static System.Drawing.Bitmap StopNormal {
             get {
                 object obj = ResourceManager.GetObject("StopNormal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unFullscreenClick {
+            get {
+                object obj = ResourceManager.GetObject("unFullscreenClick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unFullscreenHover {
+            get {
+                object obj = ResourceManager.GetObject("unFullscreenHover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unFullscreenNormal {
+            get {
+                object obj = ResourceManager.GetObject("unFullscreenNormal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
