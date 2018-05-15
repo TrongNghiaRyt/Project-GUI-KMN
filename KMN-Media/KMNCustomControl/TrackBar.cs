@@ -100,7 +100,7 @@ namespace KMNCustomControl
         #region Paint
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             e.Graphics.FillEllipse(
                 new SolidBrush(backGround),
                 new Rectangle(0, panel1.Height / 4, panel1.Height / 2, panel1.Height / 2)
@@ -117,6 +117,7 @@ namespace KMNCustomControl
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             e.Graphics.FillEllipse(
                new SolidBrush(circle),
                new Rectangle(0, 0, pictureBox1.Height, pictureBox1.Height)
@@ -125,7 +126,7 @@ namespace KMNCustomControl
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             e.Graphics.FillEllipse(
                 new SolidBrush(circle),
                 new Rectangle(0, 0, panel2.Height, panel2.Height)

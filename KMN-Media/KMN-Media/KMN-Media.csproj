@@ -46,16 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NowPlayingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NowPlayingForm.Designer.cs">
+      <DependentUpon>NowPlayingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,7 +93,178 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\FastForwardClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast-forward-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast-forward-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast-forward-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high-volume-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high-volume-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high-volume-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button-normal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replay-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replay-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replay-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rewind-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rewind-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rewind-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuffle-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuffle-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuffle-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastForwardHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastForwardNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HighVolumeClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HighVolumeHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HighVolumeNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MuteClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MuteHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MuteNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayButtonClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayButtonHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayButtonNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReplayClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReplayHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReplayNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RewindClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RewindHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RewindNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShuffleClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShuffleHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShuffleNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShuffleClick1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShuffleHover1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShuffleNormal1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
