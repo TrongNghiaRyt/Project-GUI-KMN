@@ -62,7 +62,7 @@
             // 
             this.pnMenu.BackColor = System.Drawing.Color.DarkGray;
             this.pnMenu.Controls.Add(this.tabTitle1);
-            this.pnMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnMenu.Location = new System.Drawing.Point(3, 0);
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.Size = new System.Drawing.Size(175, 500);
             this.pnMenu.TabIndex = 0;
@@ -91,43 +91,42 @@
             // 
             // tabMenu
             // 
-            this.tabMenu.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabMenu.Controls.Add(this.tabMusic);
             this.tabMenu.Controls.Add(this.tabVideo);
             this.tabMenu.Controls.Add(this.tabNow);
-            this.tabMenu.Location = new System.Drawing.Point(150, 0);
+            this.tabMenu.Location = new System.Drawing.Point(178, 0);
             this.tabMenu.Multiline = true;
             this.tabMenu.Name = "tabMenu";
             this.tabMenu.SelectedIndex = 0;
-            this.tabMenu.Size = new System.Drawing.Size(650, 500);
+            this.tabMenu.Size = new System.Drawing.Size(625, 500);
             this.tabMenu.TabIndex = 2;
             // 
             // tabMusic
             // 
             this.tabMusic.AllowDrop = true;
             this.tabMusic.BackColor = System.Drawing.Color.White;
-            this.tabMusic.Location = new System.Drawing.Point(23, 4);
+            this.tabMusic.Location = new System.Drawing.Point(4, 22);
             this.tabMusic.Name = "tabMusic";
             this.tabMusic.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMusic.Size = new System.Drawing.Size(623, 492);
+            this.tabMusic.Size = new System.Drawing.Size(617, 474);
             this.tabMusic.TabIndex = 0;
             this.tabMusic.Text = "Music";
             // 
             // tabVideo
             // 
-            this.tabVideo.Location = new System.Drawing.Point(23, 4);
+            this.tabVideo.Location = new System.Drawing.Point(4, 22);
             this.tabVideo.Name = "tabVideo";
             this.tabVideo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabVideo.Size = new System.Drawing.Size(623, 492);
+            this.tabVideo.Size = new System.Drawing.Size(617, 474);
             this.tabVideo.TabIndex = 1;
             this.tabVideo.Text = "Video";
             this.tabVideo.UseVisualStyleBackColor = true;
             // 
             // tabNow
             // 
-            this.tabNow.Location = new System.Drawing.Point(23, 4);
+            this.tabNow.Location = new System.Drawing.Point(4, 22);
             this.tabNow.Name = "tabNow";
-            this.tabNow.Size = new System.Drawing.Size(623, 492);
+            this.tabNow.Size = new System.Drawing.Size(617, 474);
             this.tabNow.TabIndex = 2;
             this.tabNow.Text = "Now playing";
             this.tabNow.UseVisualStyleBackColor = true;
