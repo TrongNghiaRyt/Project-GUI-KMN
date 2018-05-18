@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NowPlayingForm));
             this.MediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.MinLength = new System.Windows.Forms.Label();
-            this.MaxLength = new System.Windows.Forms.Label();
-            this.tbDuration = new KMNCustomControl.TrackBar();
             this.imageButton1 = new KMNCustomControl.ImageButton();
             this.imbNext = new KMNCustomControl.ImageButton();
             this.imbPrevious = new KMNCustomControl.ImageButton();
             this.imbStop = new KMNCustomControl.ImageButton();
             this.imbPlay = new KMNCustomControl.ImageButton();
+            this.MinLength = new System.Windows.Forms.Label();
+            this.MaxLength = new System.Windows.Forms.Label();
+            this.tbDuration = new KMNCustomControl.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -68,43 +68,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 85);
             this.panel1.TabIndex = 1;
-            // 
-            // MinLength
-            // 
-            this.MinLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MinLength.ForeColor = System.Drawing.SystemColors.Control;
-            this.MinLength.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.MinLength.Location = new System.Drawing.Point(3, 3);
-            this.MinLength.Name = "MinLength";
-            this.MinLength.Size = new System.Drawing.Size(75, 25);
-            this.MinLength.TabIndex = 1;
-            this.MinLength.Text = "1:30:00";
-            this.MinLength.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // MaxLength
-            // 
-            this.MaxLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaxLength.ForeColor = System.Drawing.SystemColors.Control;
-            this.MaxLength.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.MaxLength.Location = new System.Drawing.Point(722, 3);
-            this.MaxLength.Name = "MaxLength";
-            this.MaxLength.Size = new System.Drawing.Size(75, 25);
-            this.MaxLength.TabIndex = 1;
-            this.MaxLength.Text = "1:30:00";
-            this.MaxLength.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tbDuration
-            // 
-            this.tbDuration.BackColor = System.Drawing.Color.Transparent;
-            this.tbDuration.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.tbDuration.CircleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbDuration.Location = new System.Drawing.Point(84, 3);
-            this.tbDuration.Max = 10;
-            this.tbDuration.Min = 0;
-            this.tbDuration.Name = "tbDuration";
-            this.tbDuration.Size = new System.Drawing.Size(632, 25);
-            this.tbDuration.TabIndex = 0;
-            this.tbDuration.Val = 0;
             // 
             // imageButton1
             // 
@@ -170,6 +133,43 @@
             this.imbPlay.Name = "imbPlay";
             this.imbPlay.Size = new System.Drawing.Size(42, 42);
             this.imbPlay.TabIndex = 2;
+            // 
+            // MinLength
+            // 
+            this.MinLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinLength.ForeColor = System.Drawing.SystemColors.Control;
+            this.MinLength.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MinLength.Location = new System.Drawing.Point(3, 3);
+            this.MinLength.Name = "MinLength";
+            this.MinLength.Size = new System.Drawing.Size(75, 25);
+            this.MinLength.TabIndex = 1;
+            this.MinLength.Text = "1:30:00";
+            this.MinLength.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // MaxLength
+            // 
+            this.MaxLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaxLength.ForeColor = System.Drawing.SystemColors.Control;
+            this.MaxLength.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MaxLength.Location = new System.Drawing.Point(722, 3);
+            this.MaxLength.Name = "MaxLength";
+            this.MaxLength.Size = new System.Drawing.Size(75, 25);
+            this.MaxLength.TabIndex = 1;
+            this.MaxLength.Text = "1:30:00";
+            this.MaxLength.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tbDuration
+            // 
+            this.tbDuration.BackColor = System.Drawing.Color.Transparent;
+            this.tbDuration.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbDuration.CircleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbDuration.Location = new System.Drawing.Point(84, 3);
+            this.tbDuration.Max = 10;
+            this.tbDuration.Min = 0;
+            this.tbDuration.Name = "tbDuration";
+            this.tbDuration.Size = new System.Drawing.Size(632, 25);
+            this.tbDuration.TabIndex = 0;
+            this.tbDuration.Val = 0;
             // 
             // NowPlayingForm
             // 
