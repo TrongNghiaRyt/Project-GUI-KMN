@@ -63,6 +63,36 @@ namespace KMN_Media.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backClick {
+            get {
+                object obj = ResourceManager.GetObject("backClick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backHover {
+            get {
+                object obj = ResourceManager.GetObject("backHover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backNormal {
+            get {
+                object obj = ResourceManager.GetObject("backNormal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FastForwardClick {
             get {
                 object obj = ResourceManager.GetObject("FastForwardClick", resourceCulture);
@@ -146,6 +176,16 @@ namespace KMN_Media.Properties {
         internal static System.Drawing.Bitmap HighVolumeNormal {
             get {
                 object obj = ResourceManager.GetObject("HighVolumeNormal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KMN {
+            get {
+                object obj = ResourceManager.GetObject("KMN", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +306,36 @@ namespace KMN_Media.Properties {
         internal static System.Drawing.Bitmap ReplayNormal {
             get {
                 object obj = ResourceManager.GetObject("ReplayNormal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap replayOnClick {
+            get {
+                object obj = ResourceManager.GetObject("replayOnClick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap replayOnHover {
+            get {
+                object obj = ResourceManager.GetObject("replayOnHover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap replayOnNormal {
+            get {
+                object obj = ResourceManager.GetObject("replayOnNormal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

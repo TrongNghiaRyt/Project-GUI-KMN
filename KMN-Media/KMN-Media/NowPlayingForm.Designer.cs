@@ -31,14 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NowPlayingForm));
             this.MediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.imageButton1 = new KMNCustomControl.ImageButton();
+            this.MinLength = new System.Windows.Forms.Label();
+            this.MaxLength = new System.Windows.Forms.Label();
+            this.tbDuration = new KMNCustomControl.TrackBar();
+            this.tbVolume = new KMNCustomControl.TrackBar();
+            this.imbFullscreen = new KMNCustomControl.ImageButton();
+            this.imbBack = new KMNCustomControl.ImageButton();
+            this.imbVolume = new KMNCustomControl.ImageButton();
             this.imbNext = new KMNCustomControl.ImageButton();
             this.imbPrevious = new KMNCustomControl.ImageButton();
             this.imbStop = new KMNCustomControl.ImageButton();
             this.imbPlay = new KMNCustomControl.ImageButton();
-            this.MinLength = new System.Windows.Forms.Label();
-            this.MaxLength = new System.Windows.Forms.Label();
-            this.tbDuration = new KMNCustomControl.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.MediaPlayer)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +59,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
-            this.panel1.Controls.Add(this.imageButton1);
+            this.panel1.Controls.Add(this.tbVolume);
+            this.panel1.Controls.Add(this.imbFullscreen);
+            this.panel1.Controls.Add(this.imbBack);
+            this.panel1.Controls.Add(this.imbVolume);
             this.panel1.Controls.Add(this.imbNext);
             this.panel1.Controls.Add(this.imbPrevious);
             this.panel1.Controls.Add(this.imbStop);
@@ -68,71 +74,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 85);
             this.panel1.TabIndex = 1;
-            // 
-            // imageButton1
-            // 
-            this.imageButton1.ImgClick_pause = null;
-            this.imageButton1.ImgClick_play = global::KMN_Media.Properties.Resources.fullscreenClick;
-            this.imageButton1.ImgNormal_pause = null;
-            this.imageButton1.ImgNormal_play = global::KMN_Media.Properties.Resources.fullscreenNormal;
-            this.imageButton1.ImgTouch_pause = null;
-            this.imageButton1.ImgTough_play = global::KMN_Media.Properties.Resources.fullscreenHover;
-            this.imageButton1.Location = new System.Drawing.Point(756, 41);
-            this.imageButton1.Name = "imageButton1";
-            this.imageButton1.Size = new System.Drawing.Size(32, 32);
-            this.imageButton1.TabIndex = 3;
-            // 
-            // imbNext
-            // 
-            this.imbNext.ImgClick_pause = null;
-            this.imbNext.ImgClick_play = global::KMN_Media.Properties.Resources.FastForwardClick;
-            this.imbNext.ImgNormal_pause = null;
-            this.imbNext.ImgNormal_play = global::KMN_Media.Properties.Resources.FastForwardNormal;
-            this.imbNext.ImgTouch_pause = null;
-            this.imbNext.ImgTough_play = global::KMN_Media.Properties.Resources.FastForwardHover;
-            this.imbNext.Location = new System.Drawing.Point(136, 41);
-            this.imbNext.Name = "imbNext";
-            this.imbNext.Size = new System.Drawing.Size(32, 32);
-            this.imbNext.TabIndex = 3;
-            // 
-            // imbPrevious
-            // 
-            this.imbPrevious.ImgClick_pause = null;
-            this.imbPrevious.ImgClick_play = global::KMN_Media.Properties.Resources.RewindClick;
-            this.imbPrevious.ImgNormal_pause = null;
-            this.imbPrevious.ImgNormal_play = global::KMN_Media.Properties.Resources.RewindNormal;
-            this.imbPrevious.ImgTouch_pause = null;
-            this.imbPrevious.ImgTough_play = global::KMN_Media.Properties.Resources.RewindHover;
-            this.imbPrevious.Location = new System.Drawing.Point(98, 41);
-            this.imbPrevious.Name = "imbPrevious";
-            this.imbPrevious.Size = new System.Drawing.Size(32, 32);
-            this.imbPrevious.TabIndex = 3;
-            // 
-            // imbStop
-            // 
-            this.imbStop.ImgClick_pause = null;
-            this.imbStop.ImgClick_play = global::KMN_Media.Properties.Resources.StopClick;
-            this.imbStop.ImgNormal_pause = null;
-            this.imbStop.ImgNormal_play = global::KMN_Media.Properties.Resources.StopNormal;
-            this.imbStop.ImgTouch_pause = null;
-            this.imbStop.ImgTough_play = global::KMN_Media.Properties.Resources.StopHover;
-            this.imbStop.Location = new System.Drawing.Point(60, 41);
-            this.imbStop.Name = "imbStop";
-            this.imbStop.Size = new System.Drawing.Size(32, 32);
-            this.imbStop.TabIndex = 3;
-            // 
-            // imbPlay
-            // 
-            this.imbPlay.ImgClick_pause = null;
-            this.imbPlay.ImgClick_play = global::KMN_Media.Properties.Resources.PlayButtonClick;
-            this.imbPlay.ImgNormal_pause = null;
-            this.imbPlay.ImgNormal_play = global::KMN_Media.Properties.Resources.PlayButtonNormal;
-            this.imbPlay.ImgTouch_pause = null;
-            this.imbPlay.ImgTough_play = global::KMN_Media.Properties.Resources.PlayButtonHover;
-            this.imbPlay.Location = new System.Drawing.Point(12, 31);
-            this.imbPlay.Name = "imbPlay";
-            this.imbPlay.Size = new System.Drawing.Size(42, 42);
-            this.imbPlay.TabIndex = 2;
             // 
             // MinLength
             // 
@@ -171,6 +112,110 @@
             this.tbDuration.TabIndex = 0;
             this.tbDuration.Val = 0;
             // 
+            // tbVolume
+            // 
+            this.tbVolume.BackColor = System.Drawing.Color.Transparent;
+            this.tbVolume.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbVolume.CircleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbVolume.Location = new System.Drawing.Point(503, 49);
+            this.tbVolume.Max = 10;
+            this.tbVolume.Min = 0;
+            this.tbVolume.Name = "tbVolume";
+            this.tbVolume.Size = new System.Drawing.Size(100, 16);
+            this.tbVolume.TabIndex = 4;
+            this.tbVolume.Val = 0;
+            // 
+            // imbFullscreen
+            // 
+            this.imbFullscreen.ImgClick_pause = null;
+            this.imbFullscreen.ImgClick_play = global::KMN_Media.Properties.Resources.fullscreenClick;
+            this.imbFullscreen.ImgNormal_pause = null;
+            this.imbFullscreen.ImgNormal_play = global::KMN_Media.Properties.Resources.fullscreenNormal;
+            this.imbFullscreen.ImgTouch_pause = null;
+            this.imbFullscreen.ImgTough_play = global::KMN_Media.Properties.Resources.fullscreenHover;
+            this.imbFullscreen.Location = new System.Drawing.Point(756, 41);
+            this.imbFullscreen.Name = "imbFullscreen";
+            this.imbFullscreen.Size = new System.Drawing.Size(32, 32);
+            this.imbFullscreen.TabIndex = 3;
+            // 
+            // imbBack
+            // 
+            this.imbBack.ImgClick_pause = null;
+            this.imbBack.ImgClick_play = global::KMN_Media.Properties.Resources.backClick;
+            this.imbBack.ImgNormal_pause = null;
+            this.imbBack.ImgNormal_play = global::KMN_Media.Properties.Resources.backNormal;
+            this.imbBack.ImgTouch_pause = null;
+            this.imbBack.ImgTough_play = global::KMN_Media.Properties.Resources.backHover;
+            this.imbBack.Location = new System.Drawing.Point(6, 41);
+            this.imbBack.Name = "imbBack";
+            this.imbBack.Size = new System.Drawing.Size(32, 32);
+            this.imbBack.TabIndex = 3;
+            // 
+            // imbVolume
+            // 
+            this.imbVolume.ImgClick_pause = global::KMN_Media.Properties.Resources.MuteClick;
+            this.imbVolume.ImgClick_play = global::KMN_Media.Properties.Resources.HighVolumeClick;
+            this.imbVolume.ImgNormal_pause = global::KMN_Media.Properties.Resources.MuteNormal;
+            this.imbVolume.ImgNormal_play = global::KMN_Media.Properties.Resources.HighVolumeNormal;
+            this.imbVolume.ImgTouch_pause = global::KMN_Media.Properties.Resources.MuteHover;
+            this.imbVolume.ImgTough_play = global::KMN_Media.Properties.Resources.HighVolumeHover;
+            this.imbVolume.Location = new System.Drawing.Point(465, 41);
+            this.imbVolume.Name = "imbVolume";
+            this.imbVolume.Size = new System.Drawing.Size(32, 32);
+            this.imbVolume.TabIndex = 3;
+            // 
+            // imbNext
+            // 
+            this.imbNext.ImgClick_pause = null;
+            this.imbNext.ImgClick_play = global::KMN_Media.Properties.Resources.FastForwardClick;
+            this.imbNext.ImgNormal_pause = null;
+            this.imbNext.ImgNormal_play = global::KMN_Media.Properties.Resources.FastForwardNormal;
+            this.imbNext.ImgTouch_pause = null;
+            this.imbNext.ImgTough_play = global::KMN_Media.Properties.Resources.FastForwardHover;
+            this.imbNext.Location = new System.Drawing.Point(427, 41);
+            this.imbNext.Name = "imbNext";
+            this.imbNext.Size = new System.Drawing.Size(32, 32);
+            this.imbNext.TabIndex = 3;
+            // 
+            // imbPrevious
+            // 
+            this.imbPrevious.ImgClick_pause = null;
+            this.imbPrevious.ImgClick_play = global::KMN_Media.Properties.Resources.RewindClick;
+            this.imbPrevious.ImgNormal_pause = null;
+            this.imbPrevious.ImgNormal_play = global::KMN_Media.Properties.Resources.RewindNormal;
+            this.imbPrevious.ImgTouch_pause = null;
+            this.imbPrevious.ImgTough_play = global::KMN_Media.Properties.Resources.RewindHover;
+            this.imbPrevious.Location = new System.Drawing.Point(341, 41);
+            this.imbPrevious.Name = "imbPrevious";
+            this.imbPrevious.Size = new System.Drawing.Size(32, 32);
+            this.imbPrevious.TabIndex = 3;
+            // 
+            // imbStop
+            // 
+            this.imbStop.ImgClick_pause = null;
+            this.imbStop.ImgClick_play = global::KMN_Media.Properties.Resources.StopClick;
+            this.imbStop.ImgNormal_pause = null;
+            this.imbStop.ImgNormal_play = global::KMN_Media.Properties.Resources.StopNormal;
+            this.imbStop.ImgTouch_pause = null;
+            this.imbStop.ImgTough_play = global::KMN_Media.Properties.Resources.StopHover;
+            this.imbStop.Location = new System.Drawing.Point(303, 41);
+            this.imbStop.Name = "imbStop";
+            this.imbStop.Size = new System.Drawing.Size(32, 32);
+            this.imbStop.TabIndex = 3;
+            // 
+            // imbPlay
+            // 
+            this.imbPlay.ImgClick_pause = global::KMN_Media.Properties.Resources.PauseClick;
+            this.imbPlay.ImgClick_play = global::KMN_Media.Properties.Resources.PlayButtonClick;
+            this.imbPlay.ImgNormal_pause = global::KMN_Media.Properties.Resources.PauseNormal;
+            this.imbPlay.ImgNormal_play = global::KMN_Media.Properties.Resources.PlayButtonNormal;
+            this.imbPlay.ImgTouch_pause = global::KMN_Media.Properties.Resources.PauseHover;
+            this.imbPlay.ImgTough_play = global::KMN_Media.Properties.Resources.PlayButtonHover;
+            this.imbPlay.Location = new System.Drawing.Point(379, 31);
+            this.imbPlay.Name = "imbPlay";
+            this.imbPlay.Size = new System.Drawing.Size(42, 42);
+            this.imbPlay.TabIndex = 2;
+            // 
             // NowPlayingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,6 +243,9 @@
         private KMNCustomControl.ImageButton imbPlay;
         private KMNCustomControl.ImageButton imbNext;
         private KMNCustomControl.ImageButton imbPrevious;
-        private KMNCustomControl.ImageButton imageButton1;
+        private KMNCustomControl.ImageButton imbFullscreen;
+        private KMNCustomControl.ImageButton imbVolume;
+        private KMNCustomControl.TrackBar tbVolume;
+        private KMNCustomControl.ImageButton imbBack;
     }
 }

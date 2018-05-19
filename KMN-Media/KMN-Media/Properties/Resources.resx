@@ -121,6 +121,9 @@
   <data name="StopNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StopNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="replayOnClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\replayOnClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="HighVolumeNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HighVolumeNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,6 +142,9 @@
   <data name="FastForwardClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FastForwardClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="unFullscreenHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unFullscreenHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ShuffleNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ShuffleNormal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,8 +160,20 @@
   <data name="MuteNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MuteNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fullscreenHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fullscreenHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="replayOnHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\replayOnHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="StopClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StopClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unFullscreenNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unFullscreenNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KMN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KMN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HighVolumeHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HighVolumeHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,6 +211,15 @@
   <data name="ReplayClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ReplayClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="unFullscreenClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unFullscreenClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="replayOnNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\replayOnNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fullscreenNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fullscreenNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="RewindClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RewindClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,19 +229,13 @@
   <data name="fullscreenClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fullscreenClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fullscreenHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fullscreenHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fullscreenNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fullscreenNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="unFullscreenClick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unFullscreenClick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unFullscreenHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unFullscreenHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unFullscreenNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\unFullscreenNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
