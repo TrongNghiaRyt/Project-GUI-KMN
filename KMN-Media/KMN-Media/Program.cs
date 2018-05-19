@@ -16,7 +16,7 @@ namespace KMN_Media
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NowPlayingForm());
+            Application.Run(new MainForm());
         }
     }
 }
