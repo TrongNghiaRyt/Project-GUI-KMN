@@ -416,6 +416,63 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuffleOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backSongClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backSongHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backSongNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextSongClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextSongHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextSongNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refesh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Create.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

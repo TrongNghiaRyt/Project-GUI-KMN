@@ -11,6 +11,8 @@ using testexListBox;
 using TagLib;
 using System.IO;
 
+
+
 namespace KMN_Media
 {
     public partial class MainForm : Form
@@ -32,6 +34,12 @@ namespace KMN_Media
         {
             InitializeComponent();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            CreateMusicList();
+            showPlayList();
+        }
         private void CreateMusicList()
         {
             exListBox1.Items.Clear();
@@ -52,7 +60,7 @@ namespace KMN_Media
         {
             var file = TagLib.File.Create(filename);
             temp = file.Tag.Title;
-            temp_time = file.Properties.Duration.ToString();
+            temp_time = TimeSpan.FromTicks(file.Properties.Duration.Ticks).ToString(@"hh\:mm\:ss");
             temp_album = file.Tag.Album;
             try
             {
@@ -62,17 +70,13 @@ namespace KMN_Media
                     temp_Image = Image.FromStream(new MemoryStream(bin));
                 }
             }
-            catch (Exception e)
+            catch
             {
 
             }
 
         }
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-            CreateMusicList();
-        }
+        
         private void exListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             timer1.Start();
@@ -256,9 +260,128 @@ namespace KMN_Media
             }
         }
 
-        private void MainForm_Load_1(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            CreateMusicList();
+            int itemNumber = exListBox2.Items.Count;
+            Stream myStream = null;
+            OpenFileDialog open = new OpenFileDialog();
+            open.Multiselect = true;
+            open.Filter = "MP3 Audio Files (*.mp3)|*.MP3|WAV Audio Files (*.wav)|*.WAV|M4A Audio Files(*.m4a)|*.m4a|All files (*.*)|*.*";
+
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if ((myStream = open.OpenFile()) != null)
+                    {
+                        using (myStream)
+                        {
+                            string[] fileNameAndPath = open.FileNames;
+
+                            for (int i = 0; i < open.FileNames.Count(); i++)
+                            {
+                                getimageMp3(fileNameAndPath[i]);
+                                exListBox2.Items.Add(new exListBoxItem(itemNumber, temp, temp_time, temp_album, fileNameAndPath[i], temp_Image));
+                                itemNumber++;
+
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            exListBox2.Items.Clear();
+        }
+
+        private void btnFinish_Click(object sender, EventArgs e)
+        {
+            if (tbListName.Text == "")
+            {
+                MessageBox.Show("You haven't set the playlist title!", "Blank playlist title");
+            }
+            else if (exListBox2.Items.Count == 0)
+            {
+                MessageBox.Show("There are notthing in the playlist", "Blank playlist");
+            }
+            else
+            {
+                string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyMusic);
+                path += "\\" + tbListName.Text + ".bin";
+
+                if (System.IO.File.Exists(path))
+                {
+                    //Do something
+                    System.IO.File.Delete(path);
+                }
+                FileStream fs = new FileStream(path, FileMode.Create);
+                BinaryWriter wr = new BinaryWriter(fs);
+                wr.Write(tbListName.Text);
+                wr.Write(exListBox2.Items.Count);
+                for (int i=0; i<exListBox2.Items.Count; i++)
+                {
+                    exListBoxItem item = exListBox2.Items[i] as exListBoxItem;
+                    wr.Write(item.Path);
+                }
+
+                fs.Close();
+                wr.Close();
+
+                MessageBox.Show("Playlist had created successfully!", "Success");
+            }    
+        }
+
+        private void showPlayList()
+        {
+            cbList.Items.Clear();
+            string[] files = Directory.GetFiles(local);
+            foreach (string file in files)
+            {
+                string fileExtexsion = Path.GetExtension(file).Trim();
+                if (fileExtexsion == ".bin")
+                {
+                    FileStream fs = new FileStream(file, FileMode.Open);
+                    BinaryReader re = new BinaryReader(fs);
+
+                    string name = re.ReadString();
+                    cbList.Items.Add(name);
+
+                    fs.Close();
+                    re.Close();
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            showPlayList();
+        }
+
+        private void cbList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            exListBox3.Items.Clear();
+            string path = local + "\\" + cbList.Text + ".bin";
+
+            FileStream fs = new FileStream(path, FileMode.Open);
+            BinaryReader re = new BinaryReader(fs);
+
+            string a = re.ReadString();
+            int num = re.ReadInt32();
+            for (int i=0; i<num; i++)
+            {
+                string file = re.ReadString();
+                getimageMp3(file);
+                exListBox3.Items.Add(new exListBoxItem(i, temp, temp_time, temp_album, file, temp_Image));
+            }
+            
+            fs.Close();
+            re.Close();
         }
     }
 }

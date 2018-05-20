@@ -38,7 +38,7 @@ namespace CUstomTAbControl
         #endregion
 
         #region Title Size
-        private Size _titlesize = new Size(200, 30);
+        private Size _titlesize = new Size(175, 30);
         public Size TitleSize { get { return _titlesize; }set { _titlesize = value;UpdateControl(); } }
         #endregion
 
