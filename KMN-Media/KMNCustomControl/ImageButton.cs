@@ -35,12 +35,7 @@ namespace KMNCustomControl
         public Image ImgNormal_pause { get; set; } = null;
         public Image ImgTouch_pause { get; set; } = null;
         public Image ImgClick_pause { get; set; } = null;
-
         private int status = 0;
-        public int Status
-        {
-            get { return status; }
-        }
 
         private int weight_i;
         private int height_i;
