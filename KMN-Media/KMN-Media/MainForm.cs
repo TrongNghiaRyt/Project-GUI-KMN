@@ -10,41 +10,39 @@ using System.Windows.Forms;
 using testexListBox;
 using TagLib;
 using System.IO;
-using System.Security.Permissions;
-using KMNCustomControl;
+
+
 
 namespace KMN_Media
 {
-    [FileIOPermission(SecurityAction.Assert, Read = "C:/")]
     public partial class MainForm : Form
     {
-            #region Variable
-            private static string local = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyMusic);
-            string temp;
-            string temp_time;
-            string temp_album;
-            Image temp_Image = null;
-            bool checkmute = true;
-            bool RunWMP = false;
-            bool CheckStop = false;
-            bool CheckRepeat = false;
-            bool CheckShuffer = false;
-            Random rd = new Random();
-            public static bool CheckUpdate = false;
-            string Video_temp = null;
-            public static string Local
+        #region Variable
+        private static string local = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyMusic);
+        string temp;
+        string temp_time;
+        string temp_album;
+        Image temp_Image = null;
+        bool checkmute = true;
+        bool RunWMP = false;
+        bool CheckStop = false;
+        bool CheckRepeat = false;
+        bool CheckShuffer = false;
+        Random rd = new Random();
+        public static bool CheckUpdate = false;
+        public static string Local
+        {
+            get
             {
-                get
-                {
-                    return local;
-                }
-
-                set
-                {
-                    local = value;
-                }
+                return local;
             }
-            #endregion
+
+            set
+            {
+                local = value;
+            }
+        }
+        #endregion
         public MainForm()
         {
             InitializeComponent();
@@ -113,11 +111,11 @@ namespace KMN_Media
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-                if (RunWMP == true)
-                {
-                    tbTime.Val += 1;
-                    lbMin.Text = axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
-                }
+            if (RunWMP == true)
+            {
+                tbTime.Val += 1;
+                lbMin.Text = axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
+            }
             ChangeMode();
             CheckMuteButton();
             if (CheckUpdate == true)
@@ -342,7 +340,7 @@ namespace KMN_Media
             }
             else
             {
-                string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyMusic);
+                string path = local;
                 path += "\\" + tbListName.Text + ".bin";
 
                 if (System.IO.File.Exists(path))
@@ -390,6 +388,7 @@ namespace KMN_Media
 
         private void button2_Click(object sender, EventArgs e)
         {
+            cbList.Text = "";
             showPlayList();
         }
 
@@ -413,6 +412,7 @@ namespace KMN_Media
             fs.Close();
             re.Close();
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             ChoosePath cp = new ChoosePath();
@@ -431,28 +431,54 @@ namespace KMN_Media
             Properties.Settings.Default.Save();
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void btnPlay_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Multiselect = true;
-            ofd.ValidateNames = true;
-            ofd.Filter = "WMV|*.wmv|MP4|*.mp4";
-            string[] FileNames;
-            if (ofd.ShowDialog() == DialogResult.OK)
+            if (exListBox3.Items.Count == 0)
+                MessageBox.Show("You haven't selected playlist!","Playlist error!");
+            else
             {
-                FileNames = ofd.FileNames;
-
-                foreach (string Item in FileNames)
+                exListBox1.Items.Clear();
+                for (int i=0; i<exListBox3.Items.Count; i++)
                 {
-                    flowLayoutPanel1.Controls.Add(new VideoLayout(Item));
-                }
+                    exListBoxItem item = exListBox3.Items[i] as exListBoxItem;
+                    exListBox1.Items.Add(new exListBoxItem(i, item.Time, item.Time, item.Album, item.Path, item.Img));
+                    tabMenu.SelectedTab = tabMusic;
 
+                    timer1.Start();
+                    tbTime.Val = 0;
+                    exListBoxItem items = exListBox1.Items[0] as exListBoxItem;
+                    axWindowsMediaPlayer1.URL = items.Path;
+                    axWindowsMediaPlayer1.Ctlcontrols.play();
+                    //exListBox1.SelectedIndex = 1;
+                    picSong.Image = items.Img;
+                    lbSongName.Text = items.Title;
+                    lbDuration.Text = items.Album;
+                    TBvolume.Val = 50;
+                    RunWMP = true;
+                    CheckStop = false;
+                }
             }
         }
 
-        private void VideoClick(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-          
+            string path = local + "//" + cbList.Text + ".bin";
+            try
+            {
+                if (System.IO.File.Exists(path))
+                {
+                    //Do something
+                    System.IO.File.Delete(path);
+                    MessageBox.Show("Delete playlist successfully!", "success!");
+                    cbList.Text = "";
+                    showPlayList();
+                    exListBox3.Items.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                
+            }
         }
     }
 }
