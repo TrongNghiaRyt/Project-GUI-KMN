@@ -137,6 +137,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Choose path";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -650,6 +651,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "KMN Player";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnMenu.ResumeLayout(false);
             this.tabMenu.ResumeLayout(false);
