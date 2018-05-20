@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace KMN_Media
 {
-    public partial class Form1 : Form
+    public partial class NowPlayingForm : Form
     {
-        public Form1()
+        public NowPlayingForm()
         {
             InitializeComponent();
         }

@@ -76,6 +76,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Name = "TrackBar";
             this.Size = new System.Drawing.Size(200, 26);
             this.Load += new System.EventHandler(this.TrackBar_Load);
