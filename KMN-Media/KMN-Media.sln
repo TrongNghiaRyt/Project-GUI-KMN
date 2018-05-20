@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2036
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMN-Media", "KMN-Media\KMN-Media.csproj", "{84AAD0AD-C40D-4FCE-AD99-845B86FB47FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMNCustomControl", "KMNCustomControl\KMNCustomControl.csproj", "{7CAB3065-2543-44AC-A654-DF02731378E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMNTab", "KMNTab\KMNTab.csproj", "{215CEF7E-B0A3-4318-8812-5AACBD229761}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7CAB3065-2543-44AC-A654-DF02731378E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CAB3065-2543-44AC-A654-DF02731378E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CAB3065-2543-44AC-A654-DF02731378E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{215CEF7E-B0A3-4318-8812-5AACBD229761}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{215CEF7E-B0A3-4318-8812-5AACBD229761}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{215CEF7E-B0A3-4318-8812-5AACBD229761}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{215CEF7E-B0A3-4318-8812-5AACBD229761}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

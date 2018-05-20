@@ -43,6 +43,7 @@ namespace CUstomTAbControl
         public Color BackGroundColorHolver { get { return _backgroundcolorholver; }set { _backgroundcolorholver = value; } }
         private Color _backgroundcolorselected = Color.Green;
         public Color BackGroundColorSelected { get { return _backgroundcolorselected; } set { _backgroundcolorselected = value; } }
+        
         #endregion
 
         #region Text Color
@@ -79,14 +80,16 @@ namespace CUstomTAbControl
         public void Active()
         {
             _textcolor = _textcolorselected;
-            this.BackColor = _backgroundcolorselected;
             isselected = true;
+            this.BackColor = _backgroundcolorselected;
+            
         }
         public void Deactive()
         {
             _textcolor = _textcolornormal;
-            this.BackColor = _backgroundcolornormal;
             isselected = false;
+            this.BackColor = _backgroundcolornormal;
+            
         }
 
         #endregion
@@ -103,8 +106,11 @@ namespace CUstomTAbControl
 
         private void SingleTitle_MouseLeave(object sender, EventArgs e)
         {
-            this.BackColor = _backgroundcolornormal;
-            _textcolor = TextColorNormal;
+            if (!isselected)
+            {
+                this.BackColor = _backgroundcolornormal;
+                _textcolor = TextColorNormal;
+            }
         }
 
         private void SingleTitle_Paint(object sender, PaintEventArgs e)
@@ -124,19 +130,19 @@ namespace CUstomTAbControl
                         break;
                     case ContentAlignment.TopRight:
                         sf.Alignment = StringAlignment.Far;
-                        sf.Alignment = StringAlignment.Near;
+                        sf.LineAlignment = StringAlignment.Near;
                         break;
                     case ContentAlignment.MiddleLeft:
                         sf.Alignment = StringAlignment.Near;
-                        sf.Alignment = StringAlignment.Center;
+                        sf.LineAlignment = StringAlignment.Center;
                         break;
                     case ContentAlignment.MiddleCenter:
                         sf.Alignment = StringAlignment.Center;
-                        sf.Alignment = StringAlignment.Center;
+                        sf.LineAlignment = StringAlignment.Center;
                         break;
                     case ContentAlignment.MiddleRight:
                         sf.Alignment = StringAlignment.Far;
-                        sf.Alignment = StringAlignment.Center;
+                        sf.LineAlignment = StringAlignment.Center;
                         break;
                     case ContentAlignment.BottomLeft:
                         sf.Alignment = StringAlignment.Near;

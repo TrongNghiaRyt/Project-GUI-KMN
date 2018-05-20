@@ -23,6 +23,9 @@ namespace CUstomTAbControl
         public Color BackGroundColorHolver { get { return _backgroundcolorholver; } set { _backgroundcolorholver = value; } }
         private Color _backgroundcolorselected = Color.Green;
         public Color BackGroundColorSelected { get { return _backgroundcolorselected; } set { _backgroundcolorselected = value; } }
+        private Color _backgroundcolorclicked = Color.BlueViolet;
+        public Color BackGroundColorClicked { get { return _backgroundcolorclicked; } set { _backgroundcolorclicked = value; } }
+
         #endregion
 
         #region Text Color
@@ -35,7 +38,7 @@ namespace CUstomTAbControl
         #endregion
 
         #region Title Size
-        private Size _titlesize = new Size(200, 30);
+        private Size _titlesize = new Size(175, 30);
         public Size TitleSize { get { return _titlesize; }set { _titlesize = value;UpdateControl(); } }
         #endregion
 
@@ -76,7 +79,7 @@ namespace CUstomTAbControl
         #endregion
 
         #region Title Margin
-        private int _margin = 5;
+        private int _margin = 0;
         public int Titlemargin
         {
             get { return _margin; }

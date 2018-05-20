@@ -9,8 +9,10 @@ using System.Windows.Forms;
 
 namespace testexListBox
 {
-    class exListBoxItem
+   public class exListBoxItem
     {
+        private string _path;
+        private Image _img;
         private string _title;
         private string _details;
         private string _time;
@@ -29,12 +31,14 @@ namespace testexListBox
             set { _id = value; }
         }
 
-        public exListBoxItem(int id, string title, string time,string album)
+        public exListBoxItem(int id, string title, string time,string album,string path,Image img)
         {
             _id = id;
             _title = title;
             _time=time;
             Album = album;
+            Img = img;
+            Path = path;
             
         }
 
@@ -77,6 +81,32 @@ namespace testexListBox
             set
             {
                 _album = value;
+            }
+        }
+
+        public Image Img
+        {
+            get
+            {
+                return _img;
+            }
+
+            set
+            {
+                _img = value;
+            }
+        }
+
+        public string Path
+        {
+            get
+            {
+                return _path;
+            }
+
+            set
+            {
+                _path = value;
             }
         }
 

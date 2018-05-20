@@ -44,18 +44,35 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="taglib-sharp">
+      <HintPath>..\taglib-sharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ChoosePath.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ChoosePath.Designer.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NowPlayingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NowPlayingForm.Designer.cs">
+      <DependentUpon>NowPlayingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ChoosePath.resx" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NowPlayingForm.resx">
+      <DependentUpon>NowPlayingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,31 +104,379 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\FastForwardClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast-forward-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast-forward-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast-forward-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high-volume-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high-volume-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high-volume-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button-normal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replay-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replay-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replay-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rewind-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rewind-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rewind-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuffle-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuffle-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuffle-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastForwardHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastForwardNormal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HighVolumeClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HighVolumeHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HighVolumeNormal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MuteClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MuteHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MuteNormal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseNormal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayButtonClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayButtonHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayButtonNormal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReplayClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReplayHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReplayNormal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RewindClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RewindHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RewindNormal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShuffleClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShuffleHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShuffleNormal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopNormal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShuffleClick1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShuffleHover1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShuffleNormal1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fullscreenClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fullscreenHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fullscreenNormal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unFullscreenClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unFullscreenHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unFullscreenNormal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KMN.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replayOnClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replayOnHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replayOnNormal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backClick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backNormal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuffleOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backSongClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backSongHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backSongNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextSongClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextSongHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextSongNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\play-button.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\back.png" />
+    <None Include="Resources\plus.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\fast-forward.png" />
+    <None Include="Resources\Refesh.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\mute.png" />
+    <None Include="Resources\cancel1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\next.png" />
+    <None Include="Resources\Clear1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\replay.png" />
+    <None Include="Resources\list1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\rewind.png" />
+    <None Include="Resources\play-button1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\play1.png" />
+    <None Include="Resources\plus1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\play2.png" />
+    <None Include="Resources\Create.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
