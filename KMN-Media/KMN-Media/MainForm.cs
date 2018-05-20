@@ -18,7 +18,7 @@ namespace KMN_Media
     public partial class MainForm : Form
     {
         #region Variable
-        string local = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyMusic);
+        private static string local = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyMusic);
         string temp;
         string temp_time;
         string temp_album;
@@ -29,6 +29,19 @@ namespace KMN_Media
         bool CheckRepeat = false;
         bool CheckShuffer = false;
         Random rd = new Random();
+        public static bool CheckUpdate = false;
+        public static string Local
+        {
+            get
+            {
+                return local;
+            }
+
+            set
+            {
+                local = value;
+            }
+        }
         #endregion
         public MainForm()
         {
@@ -37,13 +50,17 @@ namespace KMN_Media
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.Link != null)
+            {
+                Local = Properties.Settings.Default.Link;
+            }
             CreateMusicList();
             showPlayList();
         }
         private void CreateMusicList()
         {
             exListBox1.Items.Clear();
-            string[] files = Directory.GetFiles(local);
+            string[] files = Directory.GetFiles(Local);
             foreach (string file in files)
             {
                 int i = 0;
@@ -101,6 +118,10 @@ namespace KMN_Media
             }
             ChangeMode();
             CheckMuteButton();
+            if (CheckUpdate == true)
+            {
+                UpdateListbox();
+            }
         }
 
         private void tbTime_MouseClick(object sender, MouseEventArgs e)
@@ -142,6 +163,13 @@ namespace KMN_Media
                                 BeginInvoke(new Action(() =>
                                 {
                                     exListBox1.SelectedIndex = exListBox1.SelectedIndex + 1;
+                                }));
+                            }
+                            if (exListBox1.SelectedIndex == exListBox1.Items.Count - 1)
+                            {
+                                BeginInvoke(new Action(() =>
+                                {
+                                    exListBox1.SelectedItem = exListBox1.Items[0];
                                 }));
                             }
                         }
@@ -340,7 +368,7 @@ namespace KMN_Media
         private void showPlayList()
         {
             cbList.Items.Clear();
-            string[] files = Directory.GetFiles(local);
+            string[] files = Directory.GetFiles(Local);
             foreach (string file in files)
             {
                 string fileExtexsion = Path.GetExtension(file).Trim();
@@ -366,7 +394,7 @@ namespace KMN_Media
         private void cbList_SelectedIndexChanged(object sender, EventArgs e)
         {
             exListBox3.Items.Clear();
-            string path = local + "\\" + cbList.Text + ".bin";
+            string path = Local + "\\" + cbList.Text + ".bin";
 
             FileStream fs = new FileStream(path, FileMode.Open);
             BinaryReader re = new BinaryReader(fs);
@@ -382,6 +410,23 @@ namespace KMN_Media
             
             fs.Close();
             re.Close();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ChoosePath cp = new ChoosePath();
+            cp.Show();
+        }
+        private void UpdateListbox()
+        {
+            exListBox1.Items.Clear();
+            CreateMusicList();
+            CheckUpdate = false;
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Properties.Settings.Default.Link = Local;
+            Properties.Settings.Default.Save();
         }
     }
 }
