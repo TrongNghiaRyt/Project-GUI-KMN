@@ -10,39 +10,41 @@ using System.Windows.Forms;
 using testexListBox;
 using TagLib;
 using System.IO;
-
-
+using System.Security.Permissions;
+using KMNCustomControl;
 
 namespace KMN_Media
 {
+    [FileIOPermission(SecurityAction.Assert, Read = "C:/")]
     public partial class MainForm : Form
     {
-        #region Variable
-        private static string local = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyMusic);
-        string temp;
-        string temp_time;
-        string temp_album;
-        Image temp_Image = null;
-        bool checkmute = true;
-        bool RunWMP = false;
-        bool CheckStop = false;
-        bool CheckRepeat = false;
-        bool CheckShuffer = false;
-        Random rd = new Random();
-        public static bool CheckUpdate = false;
-        public static string Local
-        {
-            get
+            #region Variable
+            private static string local = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyMusic);
+            string temp;
+            string temp_time;
+            string temp_album;
+            Image temp_Image = null;
+            bool checkmute = true;
+            bool RunWMP = false;
+            bool CheckStop = false;
+            bool CheckRepeat = false;
+            bool CheckShuffer = false;
+            Random rd = new Random();
+            public static bool CheckUpdate = false;
+            string Video_temp = null;
+            public static string Local
             {
-                return local;
-            }
+                get
+                {
+                    return local;
+                }
 
-            set
-            {
-                local = value;
+                set
+                {
+                    local = value;
+                }
             }
-        }
-        #endregion
+            #endregion
         public MainForm()
         {
             InitializeComponent();
@@ -111,11 +113,11 @@ namespace KMN_Media
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (RunWMP == true)
-            {
-                tbTime.Val += 1;
-                lbMin.Text = axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
-            }
+                if (RunWMP == true)
+                {
+                    tbTime.Val += 1;
+                    lbMin.Text = axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
+                }
             ChangeMode();
             CheckMuteButton();
             if (CheckUpdate == true)
@@ -427,6 +429,30 @@ namespace KMN_Media
         {
             Properties.Settings.Default.Link = Local;
             Properties.Settings.Default.Save();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Multiselect = true;
+            ofd.ValidateNames = true;
+            ofd.Filter = "WMV|*.wmv|MP4|*.mp4";
+            string[] FileNames;
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                FileNames = ofd.FileNames;
+
+                foreach (string Item in FileNames)
+                {
+                    flowLayoutPanel1.Controls.Add(new VideoLayout(Item));
+                }
+
+            }
+        }
+
+        private void VideoClick(object sender, EventArgs e)
+        {
+          
         }
     }
 }

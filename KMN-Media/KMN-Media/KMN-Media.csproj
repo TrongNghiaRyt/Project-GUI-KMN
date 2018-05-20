@@ -67,6 +67,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VideoLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VideoLayout.Designer.cs">
+      <DependentUpon>VideoLayout.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChoosePath.resx" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -84,6 +90,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="VideoLayout.resx">
+      <DependentUpon>VideoLayout.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

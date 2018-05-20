@@ -38,6 +38,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.exListBox1 = new testexListBox.exListBox();
             this.tabVideo = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabNow = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pageEx = new System.Windows.Forms.TabPage();
@@ -78,6 +81,7 @@
             this.pnMenu.SuspendLayout();
             this.tabMenu.SuspendLayout();
             this.tabMusic.SuspendLayout();
+            this.tabVideo.SuspendLayout();
             this.tabNow.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.pageEx.SuspendLayout();
@@ -108,12 +112,12 @@
             this.tabTitle1.BackGroundColorHolver = System.Drawing.Color.Aqua;
             this.tabTitle1.BackGroundColorNomal = System.Drawing.Color.White;
             this.tabTitle1.BackGroundColorSelected = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tabTitle1.Location = new System.Drawing.Point(0, 75);
+            this.tabTitle1.Location = new System.Drawing.Point(1, 74);
             this.tabTitle1.Name = "tabTitle1";
             this.tabTitle1.Size = new System.Drawing.Size(175, 90);
             this.tabTitle1.SizeLayout = CUstomTAbControl.TabTitle.sizelayout.AutoSize;
             this.tabTitle1.Tabcontrol = this.tabMenu;
-            this.tabTitle1.TabIndex = 3;
+            this.tabTitle1.TabIndex = 4;
             this.tabTitle1.TextColorHolver = System.Drawing.Color.Black;
             this.tabTitle1.TextColorNormal = System.Drawing.Color.Black;
             this.tabTitle1.TextColorSelected = System.Drawing.Color.White;
@@ -184,6 +188,9 @@
             // 
             // tabVideo
             // 
+            this.tabVideo.Controls.Add(this.flowLayoutPanel1);
+            this.tabVideo.Controls.Add(this.button2);
+            this.tabVideo.Controls.Add(this.label5);
             this.tabVideo.Location = new System.Drawing.Point(4, 22);
             this.tabVideo.Name = "tabVideo";
             this.tabVideo.Padding = new System.Windows.Forms.Padding(3);
@@ -191,6 +198,36 @@
             this.tabVideo.TabIndex = 1;
             this.tabVideo.Text = "Video";
             this.tabVideo.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 42);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(602, 432);
+            this.flowLayoutPanel1.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button2.Location = new System.Drawing.Point(524, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 36);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Choose path";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Algerian", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 36);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "VIDEO";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tabNow
             // 
@@ -647,6 +684,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(816, 639);
             this.Name = "MainForm";
             this.Text = "KMN Player";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
@@ -654,6 +692,7 @@
             this.pnMenu.ResumeLayout(false);
             this.tabMenu.ResumeLayout(false);
             this.tabMusic.ResumeLayout(false);
+            this.tabVideo.ResumeLayout(false);
             this.tabNow.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.pageEx.ResumeLayout(false);
@@ -712,9 +751,12 @@
         private System.Windows.Forms.Label lbChoose;
         private System.Windows.Forms.Button btRe;
         private testexListBox.exListBox exListBox3;
-        private CUstomTAbControl.TabTitle tabTitle1;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Button btnDelete;
+        private CUstomTAbControl.TabTitle tabTitle1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 
