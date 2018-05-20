@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnMenu = new System.Windows.Forms.Panel();
-            this.tabTitle1 = new CUstomTAbControl.TabTitle();
             this.tabMenu = new System.Windows.Forms.TabControl();
             this.tabMusic = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
@@ -41,7 +40,10 @@
             this.tabNow = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pageEx = new System.Windows.Forms.TabPage();
+            this.btnPlay = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.exListBox3 = new testexListBox.exListBox();
+            this.btRe = new System.Windows.Forms.Button();
             this.cbList = new System.Windows.Forms.ComboBox();
             this.lbChoose = new System.Windows.Forms.Label();
             this.pageNew = new System.Windows.Forms.TabPage();
@@ -49,32 +51,30 @@
             this.tbListName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
+            this.btnFinish = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.pnPlay = new System.Windows.Forms.Panel();
+            this.imbPlayPause = new KMNCustomControl.ImageButton();
             this.lbMax = new System.Windows.Forms.Label();
             this.lbMin = new System.Windows.Forms.Label();
             this.TBvolume = new KMNCustomControl.TrackBar();
-            this.tbTime = new KMNCustomControl.TrackBar();
-            this.pnSongInfo = new System.Windows.Forms.Panel();
-            this.lbDuration = new System.Windows.Forms.Label();
-            this.lbSongName = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.picSong = new System.Windows.Forms.PictureBox();
-            this.imbPlayPause = new KMNCustomControl.ImageButton();
             this.imbVolume = new KMNCustomControl.ImageButton();
             this.imbStop = new KMNCustomControl.ImageButton();
             this.imbShuffle = new KMNCustomControl.ImageButton();
             this.imbRepeat = new KMNCustomControl.ImageButton();
             this.imbForward = new KMNCustomControl.ImageButton();
             this.imbBack = new KMNCustomControl.ImageButton();
-            this.btnPlay = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btRe = new System.Windows.Forms.Button();
-            this.btnFinish = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tbTime = new KMNCustomControl.TrackBar();
+            this.pnSongInfo = new System.Windows.Forms.Panel();
+            this.lbDuration = new System.Windows.Forms.Label();
+            this.lbSongName = new System.Windows.Forms.Label();
+            this.picSong = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tabTitle1 = new CUstomTAbControl.TabTitle();
             this.pnMenu.SuspendLayout();
             this.tabMenu.SuspendLayout();
             this.tabMusic.SuspendLayout();
@@ -82,11 +82,11 @@
             this.tabControl1.SuspendLayout();
             this.pageEx.SuspendLayout();
             this.pageNew.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.pnPlay.SuspendLayout();
             this.pnSongInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnMenu
@@ -100,28 +100,6 @@
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.Size = new System.Drawing.Size(175, 500);
             this.pnMenu.TabIndex = 0;
-            // 
-            // tabTitle1
-            // 
-            this.tabTitle1.BackColor = System.Drawing.Color.Transparent;
-            this.tabTitle1.BackGroundColorClicked = System.Drawing.Color.BlueViolet;
-            this.tabTitle1.BackGroundColorHolver = System.Drawing.Color.Aqua;
-            this.tabTitle1.BackGroundColorNomal = System.Drawing.Color.White;
-            this.tabTitle1.BackGroundColorSelected = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tabTitle1.Location = new System.Drawing.Point(0, 75);
-            this.tabTitle1.Name = "tabTitle1";
-            this.tabTitle1.Size = new System.Drawing.Size(175, 90);
-            this.tabTitle1.SizeLayout = CUstomTAbControl.TabTitle.sizelayout.AutoSize;
-            this.tabTitle1.Tabcontrol = this.tabMenu;
-            this.tabTitle1.TabIndex = 3;
-            this.tabTitle1.TextColorHolver = System.Drawing.Color.Black;
-            this.tabTitle1.TextColorNormal = System.Drawing.Color.Black;
-            this.tabTitle1.TextColorSelected = System.Drawing.Color.White;
-            this.tabTitle1.TextLayoutTitle = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabTitle1.Titlelayout = CUstomTAbControl.TabTitle.TitleLayout.Vertical;
-            this.tabTitle1.Titlemargin = 0;
-            this.tabTitle1.TitlePadding = 0;
-            this.tabTitle1.TitleSize = new System.Drawing.Size(175, 30);
             // 
             // tabMenu
             // 
@@ -227,6 +205,32 @@
             this.pageEx.Text = "Existing playlist";
             this.pageEx.UseVisualStyleBackColor = true;
             // 
+            // btnPlay
+            // 
+            this.btnPlay.Image = global::KMN_Media.Properties.Resources.list1;
+            this.btnPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlay.Location = new System.Drawing.Point(541, 407);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(56, 30);
+            this.btnPlay.TabIndex = 4;
+            this.btnPlay.Text = "Play";
+            this.btnPlay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Image = global::KMN_Media.Properties.Resources.cancel1;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(6, 407);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(67, 30);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // exListBox3
             // 
             this.exListBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
@@ -236,6 +240,19 @@
             this.exListBox3.Name = "exListBox3";
             this.exListBox3.Size = new System.Drawing.Size(602, 342);
             this.exListBox3.TabIndex = 3;
+            // 
+            // btRe
+            // 
+            this.btRe.Image = global::KMN_Media.Properties.Resources.Refesh;
+            this.btRe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btRe.Location = new System.Drawing.Point(522, 23);
+            this.btRe.Name = "btRe";
+            this.btRe.Size = new System.Drawing.Size(75, 30);
+            this.btRe.TabIndex = 2;
+            this.btRe.Text = "Refresh";
+            this.btRe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btRe.UseVisualStyleBackColor = true;
+            this.btRe.Click += new System.EventHandler(this.button2_Click);
             // 
             // cbList
             // 
@@ -310,6 +327,19 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // btnFinish
+            // 
+            this.btnFinish.Image = global::KMN_Media.Properties.Resources.Create;
+            this.btnFinish.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFinish.Location = new System.Drawing.Point(494, 408);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Size = new System.Drawing.Size(103, 30);
+            this.btnFinish.TabIndex = 0;
+            this.btnFinish.Text = "Create playlist";
+            this.btnFinish.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFinish.UseVisualStyleBackColor = true;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            // 
             // btnAdd
             // 
             this.btnAdd.Image = global::KMN_Media.Properties.Resources.plus1;
@@ -344,6 +374,15 @@
             this.label1.Text = "KMN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::KMN_Media.Properties.Resources.KMN;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
@@ -376,6 +415,20 @@
             this.pnPlay.Name = "pnPlay";
             this.pnPlay.Size = new System.Drawing.Size(550, 100);
             this.pnPlay.TabIndex = 1;
+            // 
+            // imbPlayPause
+            // 
+            this.imbPlayPause.ImgClick_pause = global::KMN_Media.Properties.Resources.PauseClick;
+            this.imbPlayPause.ImgClick_play = global::KMN_Media.Properties.Resources.PlayButtonClick;
+            this.imbPlayPause.ImgNormal_pause = global::KMN_Media.Properties.Resources.PauseNormal;
+            this.imbPlayPause.ImgNormal_play = global::KMN_Media.Properties.Resources.PlayButtonNormal;
+            this.imbPlayPause.ImgTouch_pause = global::KMN_Media.Properties.Resources.PauseHover;
+            this.imbPlayPause.ImgTough_play = global::KMN_Media.Properties.Resources.PlayButtonHover;
+            this.imbPlayPause.Location = new System.Drawing.Point(245, 43);
+            this.imbPlayPause.Name = "imbPlayPause";
+            this.imbPlayPause.Size = new System.Drawing.Size(42, 42);
+            this.imbPlayPause.TabIndex = 1;
+            this.imbPlayPause.MouseClick += new System.Windows.Forms.MouseEventHandler(this.imbPlayPause_MouseClick);
             // 
             // lbMax
             // 
@@ -412,82 +465,6 @@
             this.TBvolume.TabIndex = 9;
             this.TBvolume.Val = 0;
             this.TBvolume.MouseClick += new System.Windows.Forms.MouseEventHandler(this.trackBar1_MouseClick);
-            // 
-            // tbTime
-            // 
-            this.tbTime.BackColor = System.Drawing.Color.Transparent;
-            this.tbTime.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.tbTime.CircleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTime.Location = new System.Drawing.Point(3, 5);
-            this.tbTime.Max = 10;
-            this.tbTime.Min = 0;
-            this.tbTime.Name = "tbTime";
-            this.tbTime.Size = new System.Drawing.Size(539, 25);
-            this.tbTime.TabIndex = 0;
-            this.tbTime.Val = 0;
-            this.tbTime.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbTime_MouseClick);
-            // 
-            // pnSongInfo
-            // 
-            this.pnSongInfo.BackColor = System.Drawing.Color.DimGray;
-            this.pnSongInfo.Controls.Add(this.lbDuration);
-            this.pnSongInfo.Controls.Add(this.lbSongName);
-            this.pnSongInfo.Controls.Add(this.picSong);
-            this.pnSongInfo.Location = new System.Drawing.Point(0, 500);
-            this.pnSongInfo.Name = "pnSongInfo";
-            this.pnSongInfo.Size = new System.Drawing.Size(250, 100);
-            this.pnSongInfo.TabIndex = 1;
-            // 
-            // lbDuration
-            // 
-            this.lbDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDuration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lbDuration.Location = new System.Drawing.Point(106, 44);
-            this.lbDuration.Name = "lbDuration";
-            this.lbDuration.Size = new System.Drawing.Size(100, 23);
-            this.lbDuration.TabIndex = 1;
-            this.lbDuration.Text = "label1";
-            this.lbDuration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbSongName
-            // 
-            this.lbSongName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSongName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lbSongName.Location = new System.Drawing.Point(105, 8);
-            this.lbSongName.Name = "lbSongName";
-            this.lbSongName.Size = new System.Drawing.Size(100, 23);
-            this.lbSongName.TabIndex = 1;
-            this.lbSongName.Text = "label1";
-            this.lbSongName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // picSong
-            // 
-            this.picSong.Location = new System.Drawing.Point(0, 0);
-            this.picSong.Name = "picSong";
-            this.picSong.Size = new System.Drawing.Size(100, 100);
-            this.picSong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSong.TabIndex = 0;
-            this.picSong.TabStop = false;
-            // 
-            // imbPlayPause
-            // 
-            this.imbPlayPause.ImgClick_pause = global::KMN_Media.Properties.Resources.PauseClick;
-            this.imbPlayPause.ImgClick_play = global::KMN_Media.Properties.Resources.PlayButtonClick;
-            this.imbPlayPause.ImgNormal_pause = global::KMN_Media.Properties.Resources.PauseNormal;
-            this.imbPlayPause.ImgNormal_play = global::KMN_Media.Properties.Resources.PlayButtonNormal;
-            this.imbPlayPause.ImgTouch_pause = global::KMN_Media.Properties.Resources.PauseHover;
-            this.imbPlayPause.ImgTough_play = global::KMN_Media.Properties.Resources.PlayButtonHover;
-            this.imbPlayPause.Location = new System.Drawing.Point(245, 43);
-            this.imbPlayPause.Name = "imbPlayPause";
-            this.imbPlayPause.Size = new System.Drawing.Size(42, 42);
-            this.imbPlayPause.TabIndex = 1;
-            this.imbPlayPause.MouseClick += new System.Windows.Forms.MouseEventHandler(this.imbPlayPause_MouseClick);
             // 
             // imbVolume
             // 
@@ -573,64 +550,89 @@
             this.imbBack.TabIndex = 2;
             this.imbBack.MouseClick += new System.Windows.Forms.MouseEventHandler(this.imbBack_MouseClick);
             // 
-            // btnPlay
+            // tbTime
             // 
-            this.btnPlay.Image = global::KMN_Media.Properties.Resources.list1;
-            this.btnPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlay.Location = new System.Drawing.Point(541, 407);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(56, 30);
-            this.btnPlay.TabIndex = 4;
-            this.btnPlay.Text = "Play";
-            this.btnPlay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPlay.UseVisualStyleBackColor = true;
+            this.tbTime.BackColor = System.Drawing.Color.Transparent;
+            this.tbTime.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tbTime.CircleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbTime.Location = new System.Drawing.Point(3, 5);
+            this.tbTime.Max = 10;
+            this.tbTime.Min = 0;
+            this.tbTime.Name = "tbTime";
+            this.tbTime.Size = new System.Drawing.Size(539, 25);
+            this.tbTime.TabIndex = 0;
+            this.tbTime.Val = 0;
+            this.tbTime.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbTime_MouseClick);
             // 
-            // btnDelete
+            // pnSongInfo
             // 
-            this.btnDelete.Image = global::KMN_Media.Properties.Resources.cancel1;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(6, 407);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(67, 30);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.pnSongInfo.BackColor = System.Drawing.Color.DimGray;
+            this.pnSongInfo.Controls.Add(this.lbDuration);
+            this.pnSongInfo.Controls.Add(this.lbSongName);
+            this.pnSongInfo.Controls.Add(this.picSong);
+            this.pnSongInfo.Location = new System.Drawing.Point(0, 500);
+            this.pnSongInfo.Name = "pnSongInfo";
+            this.pnSongInfo.Size = new System.Drawing.Size(250, 100);
+            this.pnSongInfo.TabIndex = 1;
             // 
-            // btRe
+            // lbDuration
             // 
-            this.btRe.Image = global::KMN_Media.Properties.Resources.Refesh;
-            this.btRe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btRe.Location = new System.Drawing.Point(522, 23);
-            this.btRe.Name = "btRe";
-            this.btRe.Size = new System.Drawing.Size(75, 30);
-            this.btRe.TabIndex = 2;
-            this.btRe.Text = "Refresh";
-            this.btRe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btRe.UseVisualStyleBackColor = true;
-            this.btRe.Click += new System.EventHandler(this.button2_Click);
+            this.lbDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDuration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.lbDuration.Location = new System.Drawing.Point(106, 44);
+            this.lbDuration.Name = "lbDuration";
+            this.lbDuration.Size = new System.Drawing.Size(100, 23);
+            this.lbDuration.TabIndex = 1;
+            this.lbDuration.Text = "label1";
+            this.lbDuration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnFinish
+            // lbSongName
             // 
-            this.btnFinish.Image = global::KMN_Media.Properties.Resources.Create;
-            this.btnFinish.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFinish.Location = new System.Drawing.Point(494, 408);
-            this.btnFinish.Name = "btnFinish";
-            this.btnFinish.Size = new System.Drawing.Size(103, 30);
-            this.btnFinish.TabIndex = 0;
-            this.btnFinish.Text = "Create playlist";
-            this.btnFinish.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFinish.UseVisualStyleBackColor = true;
-            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            this.lbSongName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSongName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.lbSongName.Location = new System.Drawing.Point(105, 8);
+            this.lbSongName.Name = "lbSongName";
+            this.lbSongName.Size = new System.Drawing.Size(100, 23);
+            this.lbSongName.TabIndex = 1;
+            this.lbSongName.Text = "label1";
+            this.lbSongName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox1
+            // picSong
             // 
-            this.pictureBox1.Image = global::KMN_Media.Properties.Resources.KMN;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.picSong.Location = new System.Drawing.Point(0, 0);
+            this.picSong.Name = "picSong";
+            this.picSong.Size = new System.Drawing.Size(100, 100);
+            this.picSong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSong.TabIndex = 0;
+            this.picSong.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // tabTitle1
+            // 
+            this.tabTitle1.BackColor = System.Drawing.Color.White;
+            this.tabTitle1.BackGroundColorClicked = System.Drawing.Color.BlueViolet;
+            this.tabTitle1.BackGroundColorHolver = System.Drawing.Color.Aqua;
+            this.tabTitle1.BackGroundColorNomal = System.Drawing.Color.White;
+            this.tabTitle1.BackGroundColorSelected = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tabTitle1.Location = new System.Drawing.Point(0, 79);
+            this.tabTitle1.Name = "tabTitle1";
+            this.tabTitle1.Size = new System.Drawing.Size(175, 90);
+            this.tabTitle1.SizeLayout = CUstomTAbControl.TabTitle.sizelayout.AutoSize;
+            this.tabTitle1.Tabcontrol = this.tabMenu;
+            this.tabTitle1.TabIndex = 3;
+            this.tabTitle1.TextColorHolver = System.Drawing.Color.Black;
+            this.tabTitle1.TextColorNormal = System.Drawing.Color.Black;
+            this.tabTitle1.TextColorSelected = System.Drawing.Color.White;
+            this.tabTitle1.TextLayoutTitle = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tabTitle1.Titlelayout = CUstomTAbControl.TabTitle.TitleLayout.Vertical;
+            this.tabTitle1.Titlemargin = 0;
+            this.tabTitle1.TitlePadding = 0;
+            this.tabTitle1.TitleSize = new System.Drawing.Size(175, 30);
             // 
             // MainForm
             // 
@@ -657,11 +659,11 @@
             this.pageEx.ResumeLayout(false);
             this.pageNew.ResumeLayout(false);
             this.pageNew.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.pnPlay.ResumeLayout(false);
             this.pnSongInfo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picSong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -710,9 +712,9 @@
         private System.Windows.Forms.Label lbChoose;
         private System.Windows.Forms.Button btRe;
         private testexListBox.exListBox exListBox3;
-        private CUstomTAbControl.TabTitle tabTitle1;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Button btnDelete;
+        private CUstomTAbControl.TabTitle tabTitle1;
     }
 }
 
