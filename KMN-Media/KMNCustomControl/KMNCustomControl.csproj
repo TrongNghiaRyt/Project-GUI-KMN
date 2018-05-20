@@ -50,6 +50,12 @@
     <Compile Include="ImageButton.Designer.cs">
       <DependentUpon>ImageButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListVideo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListVideo.Designer.cs">
+      <DependentUpon>ListVideo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingleTitle.cs">
       <SubType>UserControl</SubType>
@@ -71,6 +77,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ListVideo.resx">
+      <DependentUpon>ListVideo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SingleTitle.resx">
       <DependentUpon>SingleTitle.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +89,43 @@
     <EmbeddedResource Include="TrackBar.resx">
       <DependentUpon>TrackBar.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPDXMLib">
+      <Guid>{73F0DD5C-D071-46B6-A8BF-897C84EAAC49}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLauncher">
+      <Guid>{5CB42160-CD7C-4806-9367-1C4A65153F4A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
