@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnMenu = new System.Windows.Forms.Panel();
-            this.tabTitle1 = new CUstomTAbControl.TabTitle();
             this.tabMenu = new System.Windows.Forms.TabControl();
             this.tabMusic = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
@@ -75,6 +74,7 @@
             this.lbSongName = new System.Windows.Forms.Label();
             this.picSong = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tabTitle1 = new CUstomTAbControl.TabTitle();
             this.pnMenu.SuspendLayout();
             this.tabMenu.SuspendLayout();
             this.tabMusic.SuspendLayout();
@@ -100,28 +100,6 @@
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.Size = new System.Drawing.Size(175, 500);
             this.pnMenu.TabIndex = 0;
-            // 
-            // tabTitle1
-            // 
-            this.tabTitle1.BackColor = System.Drawing.Color.Transparent;
-            this.tabTitle1.BackGroundColorClicked = System.Drawing.Color.BlueViolet;
-            this.tabTitle1.BackGroundColorHolver = System.Drawing.Color.Aqua;
-            this.tabTitle1.BackGroundColorNomal = System.Drawing.Color.White;
-            this.tabTitle1.BackGroundColorSelected = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tabTitle1.Location = new System.Drawing.Point(0, 75);
-            this.tabTitle1.Name = "tabTitle1";
-            this.tabTitle1.Size = new System.Drawing.Size(175, 90);
-            this.tabTitle1.SizeLayout = CUstomTAbControl.TabTitle.sizelayout.AutoSize;
-            this.tabTitle1.Tabcontrol = this.tabMenu;
-            this.tabTitle1.TabIndex = 3;
-            this.tabTitle1.TextColorHolver = System.Drawing.Color.Black;
-            this.tabTitle1.TextColorNormal = System.Drawing.Color.Black;
-            this.tabTitle1.TextColorSelected = System.Drawing.Color.White;
-            this.tabTitle1.TextLayoutTitle = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tabTitle1.Titlelayout = CUstomTAbControl.TabTitle.TitleLayout.Vertical;
-            this.tabTitle1.Titlemargin = 0;
-            this.tabTitle1.TitlePadding = 0;
-            this.tabTitle1.TitleSize = new System.Drawing.Size(175, 30);
             // 
             // tabMenu
             // 
@@ -239,6 +217,7 @@
             this.btnPlay.Text = "Play";
             this.btnPlay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // btnDelete
             // 
@@ -251,6 +230,7 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // exListBox3
             // 
@@ -633,6 +613,28 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // tabTitle1
+            // 
+            this.tabTitle1.BackColor = System.Drawing.Color.White;
+            this.tabTitle1.BackGroundColorClicked = System.Drawing.Color.BlueViolet;
+            this.tabTitle1.BackGroundColorHolver = System.Drawing.Color.Aqua;
+            this.tabTitle1.BackGroundColorNomal = System.Drawing.Color.White;
+            this.tabTitle1.BackGroundColorSelected = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tabTitle1.Location = new System.Drawing.Point(0, 79);
+            this.tabTitle1.Name = "tabTitle1";
+            this.tabTitle1.Size = new System.Drawing.Size(175, 90);
+            this.tabTitle1.SizeLayout = CUstomTAbControl.TabTitle.sizelayout.AutoSize;
+            this.tabTitle1.Tabcontrol = this.tabMenu;
+            this.tabTitle1.TabIndex = 3;
+            this.tabTitle1.TextColorHolver = System.Drawing.Color.Black;
+            this.tabTitle1.TextColorNormal = System.Drawing.Color.Black;
+            this.tabTitle1.TextColorSelected = System.Drawing.Color.White;
+            this.tabTitle1.TextLayoutTitle = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tabTitle1.Titlelayout = CUstomTAbControl.TabTitle.TitleLayout.Vertical;
+            this.tabTitle1.Titlemargin = 0;
+            this.tabTitle1.TitlePadding = 0;
+            this.tabTitle1.TitleSize = new System.Drawing.Size(175, 30);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -712,9 +714,9 @@
         private System.Windows.Forms.Label lbChoose;
         private System.Windows.Forms.Button btRe;
         private testexListBox.exListBox exListBox3;
-        private CUstomTAbControl.TabTitle tabTitle1;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Button btnDelete;
+        private CUstomTAbControl.TabTitle tabTitle1;
     }
 }
 
